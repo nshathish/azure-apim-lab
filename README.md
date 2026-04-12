@@ -1,1 +1,1 @@
-"# Azure APIM Lab" 
+# Azure APIM Lab
