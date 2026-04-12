@@ -8,6 +8,7 @@ on:
       - closed
     paths:
       - "infra/terraform/**"
+      - ".github/workflows/terraform-plan-apply.yml"
   workflow_dispatch:  # Manual trigger for testing
 
 permissions:
@@ -26,7 +27,7 @@ jobs:
   plan:
     name: Terraform Plan
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
 
     defaults:
       run:
