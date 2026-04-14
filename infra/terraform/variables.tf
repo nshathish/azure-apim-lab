@@ -21,3 +21,15 @@ variable "environment" {
   type        = string
   default     = "dev"
 }
+
+variable "apim_publisher_name" {
+  description = "Publisher name for APIM"
+  type        = string
+  default     = "ApimLab"
+}
+
+variable "apim_publisher_email" {
+  description = "Publisher email for APIM"
+  type        = string
+  default     = "nshathish@example.com"
+}
